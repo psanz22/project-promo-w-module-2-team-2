@@ -1,0 +1,11 @@
+.containerHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $colorGreyLight;
+    &__logo{
+        margin-top: 100px;
+        width: 250px;
+    }
+}
