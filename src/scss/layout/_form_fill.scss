@@ -9,6 +9,8 @@ input[type="file"]::file-selector-button {
     margin-right: 16px;
     transition: background-color 200ms;
     color: $colorWhite;
+    font-family: $fontTertiary;
+    font-size: 13px;
   }
 
 input[type="file"]::file-selector-button:hover {
@@ -37,7 +39,9 @@ input[type="file"]::file-selector-button:hover {
 .inputFields{
     border: 1px solid $colorPrimaryLight;
     height: 30px;
-
+    font-family: $fontTertiary;
+    padding-left: 9px;
+    
 }
 
 .design{
