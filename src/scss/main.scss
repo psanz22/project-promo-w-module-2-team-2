@@ -1,8 +1,12 @@
 @import 'core/variables';
 @import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'pages/index';
+@import 'layout/header_initial';
+@import 'layout/main';
+@import 'layout/form_design';
+@import 'layout/form_fill';
+@import 'layout/form_twitter';
+@import 'layout/form_share';
+@import 'layout/section_card';
+@import 'layout/section_form';
