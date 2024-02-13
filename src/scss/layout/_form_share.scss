@@ -1,0 +1,50 @@
+.share {
+    font-family: $fontTertiary;
+    width: 320px;
+    font-weight: 800;
+    font-size: 18px;   
+    
+    &__container {
+        display: flex;
+        padding: 30px 0 50px 0;
+        justify-content: space-between;
+        align-items: center;
+       
+        &--icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            i {
+                color: $colorSecondaryDark;
+            }
+        }
+        &--button {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__button {
+        font-family: $fontTertiary;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid $colorSecondaryDark;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 8px lightgray;
+        background-color: $colorSecondaryDark;
+        color: $colorWhite;
+        i {
+            padding-right: 9px;
+        }
+       
+    }
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    margin: 10px 20px 30px 23px;
+
+    #arrow {
+        color: #54585a;
+    }
+  
+}

@@ -1,0 +1,40 @@
+.twitter {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #d8d8d8;
+    &__paragraph {
+        font-size: 18px;
+        color: #54585a;
+        font-weight: 700;
+        font-family: $fontTertiary;
+    }
+    &__link {
+        font-size: 12px;
+        color: $colorSecondaryDark;
+        font-family: $fontTertiary;
+        font-weight: 700;
+    }
+    &__click {
+        display: flex;
+        gap: 5px;
+        background-color: #00a0f5;
+        color: $colorWhite;
+        padding: 5px;
+        border-radius: 0.2rem;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-family: $fontTertiary;
+            font-size: 14px;
+            a {
+                color: $colorWhite;
+            }
+        }
+       
+    
+    }
+}
