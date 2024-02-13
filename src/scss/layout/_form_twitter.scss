@@ -1,5 +1,5 @@
 .twitter {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,6 +7,8 @@
     gap: 15px;
     padding: 20px 0 20px 0;
     border-bottom: 1px solid #d8d8d8;
+    margin: 27px auto 0 auto;
+
     &__paragraph {
         font-size: 18px;
         color: #54585a;
