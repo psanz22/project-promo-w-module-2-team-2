@@ -58,14 +58,14 @@ body{
         font-size: 12px;
     } 
     &__button{
-        width: 130px;
-        height: 42px;
+        // width: 130px;
+        // height: 42px;
         background-color:$colorPrimaryMedium;
         font-family:$fontTertiary;
         color: white;
         border-radius: 25px;
         text-align: center;
-        padding: 10px;
+        padding: 10px 20px;
         margin-top: 20px;
         margin-bottom: 30px;
     }
