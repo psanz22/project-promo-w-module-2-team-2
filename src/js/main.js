@@ -9,7 +9,7 @@ const mailPreview = document.querySelector('.js-mail-preview');
 const linkedinPreview = document.querySelector('.js-linkedin-preview');
 const githubPreview = document.querySelector('.js-github-preview');
 
-//Noelia - Input
+//Form-fill
 const nameInput = document.querySelector('.js-name');
 const jobInput = document.querySelector('.js-job');
 const imageInput = document.querySelector('.js-image');
@@ -27,3 +27,29 @@ const headerShare = document.querySelector('js-share');
 const containerDesign = document.querySelector('js-design-container');
 const containerFill = document.querySelector('js-fill-container');
 const containerShare = document.querySelector('js-share-container');
+
+const form = document.querySelector('.js-form');
+
+/* 
+Recoger valor variables de los inputs
+Evento para leer lo del input 
+Escribirlo en campos del preview
+*/
+
+/*
+1. 
+2. 
+
+
+*/
+
+function handleInput(event){
+
+    if(event.target.id === "completeName"){
+        console.log("hola");
+        namePreview.innerHTML = event.target.value;
+    }
+}
+form.addEventListener('input', handleInput);
+
+
