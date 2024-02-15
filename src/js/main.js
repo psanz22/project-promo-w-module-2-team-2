@@ -60,6 +60,7 @@ Escribirlo en campos del preview
 */
 
 
+
 function handleInput(event){
     const eventTarget = event.target.value;
     if(event.target.id === "completeName"){
@@ -67,15 +68,15 @@ function handleInput(event){
     }else if(event.target.id === "job"){
         jobPreview.innerHTML = eventTarget;
     }
-    // else if(event.target.id === "email"){
-    //     mailPreview.innerHTML = eventTarget;
-    // }else if(event.target.id === "telephone"){
-    //     phonePreview.innerHTML = eventTarget;
-    // }else if(event.target.id === "linkedin"){
-    //     linkedinPreview.innerHTML = eventTarget;
-    // }else if(event.target.id === "linkedin"){
-    //     linkedinPreview.innerHTML = eventTarget;
-    // }
+    else if(event.target.id === "email"){
+        mailPreview.href = "mailto:" + eventTarget;
+    }else if(event.target.id === "telephone"){
+        phonePreview.href = "tel:" + eventTarget;
+    }else if(event.target.id === "linkedin"){
+        linkedinPreview.href = eventTarget;
+    }else if(event.target.id === "github"){
+        githubPreview.href = eventTarget;
+    }
 }      
 form.addEventListener('input', handleInput);
 
