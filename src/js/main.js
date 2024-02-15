@@ -36,20 +36,47 @@ Evento para leer lo del input
 Escribirlo en campos del preview
 */
 
-/*
-1. 
-2. 
 
+//PASOS QUE HEMOS DADO
+/*
+1. Seleccionamos el elemento HTML que en este caso es el form y hemos creado la siguiente variable:
+            // const form = document.querySelector('.js-form');
+
+2. Escuchamos al evento que es input en el que estamos escribiendo
+            //form.addEventListener('input');
+
+3. Creamos la función: que cuando el usuario meta una letra en el input pues ejecute la función
+
+        //function handleInput(event){
+
+        if(event.target.id === "completeName"){
+            console.log("hola");
+            namePreview.innerHTML = event.target.value;
+        }
+}
+
+4. Si el cursor detecta que está en input con id = completeName lo que hace es mostrar el valor que se está introduciendo (value) en el name previe
 
 */
 
-function handleInput(event){
 
+function handleInput(event){
+    const eventTarget = event.target.value;
     if(event.target.id === "completeName"){
-        console.log("hola");
-        namePreview.innerHTML = event.target.value;
+        namePreview.innerHTML = eventTarget;
+    }else if(event.target.id === "job"){
+        jobPreview.innerHTML = eventTarget;
     }
-}
+    // else if(event.target.id === "email"){
+    //     mailPreview.innerHTML = eventTarget;
+    // }else if(event.target.id === "telephone"){
+    //     phonePreview.innerHTML = eventTarget;
+    // }else if(event.target.id === "linkedin"){
+    //     linkedinPreview.innerHTML = eventTarget;
+    // }else if(event.target.id === "linkedin"){
+    //     linkedinPreview.innerHTML = eventTarget;
+    // }
+}      
 form.addEventListener('input', handleInput);
 
 
