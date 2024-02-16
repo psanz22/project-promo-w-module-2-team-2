@@ -81,3 +81,21 @@ function handleInput(event){
 form.addEventListener('input', handleInput);
 
 
+
+function showContainer() {
+    containerFill.classList.remove('hidden');
+}
+function hideContainer() {
+    containerFill.classList.add('hidden');
+}
+  
+headerFill.addEventListener('click', handleContainer);
+
+function handleContainer(event) {
+    event.preventDefault();
+    if (containerFill.classList.contains('hidden')) {
+        showContainer();
+    } else {
+        hideContainer();
+    }
+}
