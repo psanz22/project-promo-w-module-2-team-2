@@ -1,10 +1,14 @@
+
+body{
+    background-color: $colorGreyLight;
+
+}
 .containerMain{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: $colorGreyLight;
-    // height: 50%;
     &__title{
         width: 100%;
         height: 20px;
@@ -31,7 +35,7 @@
         display: flex;
         flex-direction: row;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 10px;
         height: 75px;
         width: 80%;
@@ -54,14 +58,12 @@
         font-size: 12px;
     } 
     &__button{
-        width: 130px;
-        height: 42px;
         background-color:$colorPrimaryMedium;
         font-family:$fontTertiary;
         color: white;
         border-radius: 25px;
         text-align: center;
-        padding: 10px;
+        padding: 10px 20px;
         margin-top: 20px;
         margin-bottom: 30px;
     }

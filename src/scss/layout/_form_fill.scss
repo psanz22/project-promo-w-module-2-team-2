@@ -17,23 +17,14 @@ input[type="file"]::file-selector-button:hover {
     background-color: $colorPrimaryMedium;
   }
 
-  /*queda puesto, pero firefox no admite ni ::before ni ::after*/
-  input[type="file"]::after {
-    pointer-events: none;
-    color: $colorWhite;
-    content: "Añadir imagen";
-  }
-
-  @supports (-moz-appearance: none) {
-    input[type="file"]::file-selector-button {
-      color: $colorWhite;
-    }
-  }
 
 .labelsText{
     font-size: 14px;
     color:$colorPrimaryDark;
     margin-bottom: 7px;
+}
+.inputButton{
+  margin-bottom: 20px;
 }
 
 .inputFields{
@@ -41,6 +32,7 @@ input[type="file"]::file-selector-button:hover {
     height: 30px;
     font-family: $fontTertiary;
     padding-left: 9px;
+    margin-bottom: 20px;
     
 }
 
@@ -51,7 +43,7 @@ input[type="file"]::file-selector-button:hover {
             border: 0;
             display: flex;
             flex-direction: column;
-            margin-bottom: 20px;
+            
         }    
     }
 }
