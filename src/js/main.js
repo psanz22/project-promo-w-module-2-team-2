@@ -74,7 +74,6 @@ const handleArrow1 = () => {
 
 }
 
-
 headerDesign.addEventListener('click', handleArrow1);
 
 
