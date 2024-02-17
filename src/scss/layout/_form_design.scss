@@ -7,11 +7,16 @@
     width: 90%;
     margin: 27px auto 0 auto;
     border-bottom: 1px solid #d8d8d8;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
     &__titleContainer{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 22px;
+        cursor: pointer;
         &__h3{
             display: flex;
             align-items: center;
@@ -24,8 +29,6 @@
     }
     &__fieldset{
         border: 0;
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 30px;
 
         &__radioButtonsContainer{

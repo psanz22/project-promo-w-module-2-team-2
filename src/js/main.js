@@ -74,7 +74,21 @@ const handleArrow1 = () => {
 
 }
 
+const handleArrow2 = () => {
+    open(containerFill);
+    close(containerDesign,containerShare);
+
+}
+
+const handleArrow3 = () => {
+    open(containerShare);
+    close(containerDesign,containerFill);
+
+}
+
 headerDesign.addEventListener('click', handleArrow1);
+headerFill.addEventListener('click', handleArrow2);
+headerShare.addEventListener('click', handleArrow3);
 
 
 
