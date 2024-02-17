@@ -74,7 +74,21 @@ const handleArrow1 = () => {
 
 }
 
+const handleArrow2 = () => {
+    open(containerFill);
+    close(containerDesign,containerShare);
+
+}
+
+const handleArrow3 = () => {
+    open(containerShare);
+    close(containerDesign,containerFill);
+
+}
+
 headerDesign.addEventListener('click', handleArrow1);
+headerFill.addEventListener('click', handleArrow2);
+headerShare.addEventListener('click', handleArrow3);
 
 
 
@@ -98,3 +112,21 @@ function handleInput(event){
 form.addEventListener('input', handleInput);
 
 
+
+function showContainer() {
+    containerFill.classList.remove('hidden');
+}
+function hideContainer() {
+    containerFill.classList.add('hidden');
+}
+  
+headerFill.addEventListener('click', handleContainer);
+
+function handleContainer(event) {
+    event.preventDefault();
+    if (containerFill.classList.contains('hidden')) {
+        showContainer();
+    } else {
+        hideContainer();
+    }
+}
