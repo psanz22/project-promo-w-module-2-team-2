@@ -19,14 +19,14 @@ const linkedinInput = document.querySelector('.js-linkedin');
 const githubInput = document.querySelector('.js-github');
 
 //Desplegables
-const headerDesign = document.querySelector('js-design');
-const headerFill = document.querySelector('js-fill');
-const headerShare = document.querySelector('js-share');
+const headerDesign = document.querySelector('.js-design');
+const headerFill = document.querySelector('.js-fill');
+const headerShare = document.querySelector('.js-share');
 
 //Containers
-const containerDesign = document.querySelector('js-design-container');
-const containerFill = document.querySelector('js-fill-container');
-const containerShare = document.querySelector('js-share-container');
+const containerDesign = document.querySelector('.js-design-container');
+const containerFill = document.querySelector('.js-fill-container');
+const containerShare = document.querySelector('.js-share-container');
 
 const form = document.querySelector('.js-form');
 
@@ -58,6 +58,23 @@ Escribirlo en campos del preview
 4. Si el cursor detecta que está en input con id = completeName lo que hace es mostrar el valor que se está introduciendo (value) en el name previe
 
 */
+
+function open(content){
+    content.classList.remove('hidden');
+}
+
+function close(content1,content2){
+    content1.classList.add('hidden');
+    content2.classList.add('hidden');
+}
+
+const handleArrow1 = () => {
+    open(containerDesign);
+    close(containerFill,containerShare);
+
+}
+
+headerDesign.addEventListener('click', handleArrow1);
 
 
 
