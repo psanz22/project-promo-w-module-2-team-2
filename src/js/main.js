@@ -91,23 +91,39 @@ headerDesign.addEventListener('click', handleArrow1);
 headerFill.addEventListener('click', handleArrow2);
 headerShare.addEventListener('click', handleArrow3);
 
+const object1 = {
+    completeName: "",
+    job: "",
+    avatar: "",
+    email: "",
+    telephone: "",
+    linkedin: "",
+    github: ""
 
+}
 
 function handleInput(event){
     const eventTarget = event.target.value;
-    if(event.target.id === "completeName"){
+    const idInput = event.target.id;
+    object1[idInput] = event.target.value;
+    if(idInput === "completeName"){
         namePreview.innerHTML = eventTarget;
-    }else if(event.target.id === "job"){
+    }else if(idInput === "job"){
         jobPreview.innerHTML = eventTarget;
+
     }
-    else if(event.target.id === "email"){
+    else if(idInput === "email"){
         mailPreview.href = "mailto:" + eventTarget;
-    }else if(event.target.id === "telephone"){
+
+    }else if(idInput === "telephone"){
         phonePreview.href = "tel:" + eventTarget;
-    }else if(event.target.id === "linkedin"){
+
+    }else if(idInput === "linkedin"){
         linkedinPreview.href = eventTarget;
-    }else if(event.target.id === "github"){
+
+    }else if(idInput === "github"){
         githubPreview.href = eventTarget;
+
     }
 }      
 form.addEventListener('input', handleInput);
