@@ -60,17 +60,18 @@ Escribirlo en campos del preview
 */
 
 function open(content){
-    content.classList.remove('hidden');
+    content.classList.toggle('hidden');
 }
 
-function close(content1,content2){
+function close(content1,content2, content3){
     content1.classList.add('hidden');
     content2.classList.add('hidden');
+   
 }
 
 const handleArrow1 = () => {
     open(containerDesign);
-    close(containerFill,containerShare);
+    close(containerFill,containerShare, containerDesign);
 
 }
 
@@ -113,14 +114,14 @@ form.addEventListener('input', handleInput);
 
 
 
-function showContainer() {
-    containerFill.classList.remove('hidden');
-}
-function hideContainer() {
-    containerFill.classList.add('hidden');
-}
+// function showContainer() {
+//     containerFill.classList.remove('hidden');
+// }
+// function hideContainer() {
+//     containerFill.classList.add('hidden');
+// }
   
-headerFill.addEventListener('click', handleContainer);
+// headerFill.addEventListener('click', handleContainer);
 
 function handleContainer(event) {
     event.preventDefault();
