@@ -30,6 +30,13 @@ const containerShare = document.querySelector('.js-share-container');
 
 const form = document.querySelector('.js-form');
 
+const card = document.querySelector('.js-card');
+const checkOne = document.querySelector('.js-checkOne');
+const checkTwo = document.querySelector('.js-checkTwo');
+const checkThree = document.querySelector('.js-checkThree');
+
+const formReset = document.querySelector('.js-reset');
+const mainForm = document.querySelector('.js-mainForm');
 /* 
 Recoger valor variables de los inputs
 Evento para leer lo del input 
@@ -58,12 +65,39 @@ Escribirlo en campos del preview
 4. Si el cursor detecta que está en input con id = completeName lo que hace es mostrar el valor que se está introduciendo (value) en el name previe
 
 */
+function handleReset(){
+    mainForm.reset();
+    namePreview.innerHTML= 'Nombre Apellido';
+    jobPreview.innerHTML = 'Front-end developer';
+    mailPreview.href = '';
+    phonePreview.href = '';
+    linkedinPreview.href = '';
+    githubPreview.href = '';
+}
+
+formReset.addEventListener('click', handleReset);
+
+const checkForm = document.querySelector('.js-checkForm');
+
+function colorPalettes(){
+    if (checkOne.checked) {
+        card.classList.remove('palette2', 'palette3');
+    } else if (checkTwo.checked){
+        card.classList.add('palette2');
+        card.classList.remove('palette3');
+    } else if (checkThree.checked){
+        card.classList.add('palette3');
+        card.classList.remove('palette2');
+    }
+}
+
+checkForm.addEventListener('click', colorPalettes);
 
 function open(content){
     content.classList.toggle('hidden');
 }
 
-function close(content1,content2, content3){
+function close(content1,content2){
     content1.classList.add('hidden');
     content2.classList.add('hidden');
    
@@ -147,3 +181,5 @@ function handleContainer(event) {
         hideContainer();
     }
 }
+
+import './get-avatar.js';
