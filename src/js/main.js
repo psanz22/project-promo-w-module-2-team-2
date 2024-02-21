@@ -25,9 +25,9 @@ const headerFill = document.querySelector(".js-fill");
 const headerShare = document.querySelector(".js-share");
 
 //Arrows
-const arrow1 = document.querySelector(".js-arrow1"); // design
-const arrow2 = document.querySelector(".js-arrow2"); // fill
-const arrow3 = document.querySelector(".js-arrow3"); // share
+const arrowDesign = document.querySelector(".js-arrow1"); // design
+const arrowFill = document.querySelector(".js-arrow2"); // fill
+const arrowShare = document.querySelector(".js-arrow3"); // share
 
 //Containers
 const containerDesign = document.querySelector(".js-design-container");
@@ -77,31 +77,16 @@ checkForm.addEventListener("click", colorPalettes);
 
 function open(content) {
   content.classList.toggle("hidden");
-  if (content.classList.contains("hidden")) {
-    arrow1.classList.add("arrowDown");
-  } else {
-    arrow1.classList.remove("arrowDown");
-  }
 }
 
 function close(content1, content2) {
   content1.classList.add("hidden");
   content2.classList.add("hidden");
-  if (content1.classList.contains("hidden")) {
-    arrow2.classList.add("arrowDown");
-  } else {
-    arrow2.classList.remove("arrowDown");
-  }
-  if (content2.classList.contains("hidden")) {
-    arrow3.classList.add("arrowDown");
-  } else {
-    arrow3.classList.remove("arrowDown");
-  }
 }
 
 const handleArrow1 = () => {
   open(containerDesign);
-  close(containerFill, containerShare, containerDesign);
+  close(containerFill, containerShare);
 };
 
 const handleArrow2 = () => {
@@ -148,22 +133,14 @@ function handleInput(event) {
 }
 form.addEventListener("input", handleInput);
 
-// function showContainer() {
-//     containerFill.classList.remove('hidden');
-// }
-// function hideContainer() {
-//     containerFill.classList.add('hidden');
-// }
 
-// headerFill.addEventListener('click', handleContainer);
-
-function handleContainer(event) {
-  event.preventDefault();
-  if (containerFill.classList.contains("hidden")) {
-    showContainer();
-  } else {
-    hideContainer();
-  }
-}
+// function handleContainer(event) {
+//   event.preventDefault();
+//   if (containerFill.classList.contains("hidden")) {
+//     showContainer();
+//   } else {
+//     hideContainer();
+//   }
+// }
 
 import "./get-avatar.js";
