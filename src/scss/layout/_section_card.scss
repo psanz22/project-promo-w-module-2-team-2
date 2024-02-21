@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 27px;
+
 
     &--button {
         font-size: 12px;
@@ -56,7 +58,11 @@
     &__image {
         max-width: 100%;
         height: 200px;
-        object-fit: cover;
+        background-image: url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    
     }
 
     &__socials {
@@ -80,3 +86,51 @@
         }
     }
 }
+
+.palette2 .card{
+    &__text{
+        border-left: 5px solid #bd1010;
+
+        &--name{
+            color: #420101;
+        }
+    }
+
+    &__socials{
+        &--icon{
+            border: 2px solid #e95626;
+        }
+        & a{
+            color: #420101;
+        }
+    } 
+}
+
+.palette3 .card{
+    &__text{
+        border-left: 5px solid #eab052;
+
+        &--name{
+            color: #3e5b65;
+           
+        }
+    }
+
+    &__socials{
+        &--icon{
+            border: 2px solid #a0c0cf;
+        }
+        & a{
+            color: #3e5b65;
+            
+        }
+    } 
+}
+
+// .section__card .palette2 {
+//     background-color: #f5a68c;
+// }
+
+// .section__card .palette3 {
+//     background-color: #3e5b65;
+// }
