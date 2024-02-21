@@ -101,19 +101,19 @@ const handleArrow3 = () => {
 
 function arrowState() {
   if (containerDesign.classList.contains("hidden")) {
-    arrowDesign.classList.remove("arrowDown");
-  } else {
     arrowDesign.classList.add("arrowDown");
+  } else {
+    arrowDesign.classList.remove("arrowDown");
   }
   if (containerFill.classList.contains("hidden")) {
-    arrowFill.classList.remove("arrowDown");
-  } else {
     arrowFill.classList.add("arrowDown");
+  } else {
+    arrowFill.classList.remove("arrowDown");
   }
   if (containerShare.classList.contains("hidden")) {
-    arrowShare.classList.remove("arrowDown");
-  } else {
     arrowShare.classList.add("arrowDown");
+  } else {
+    arrowShare.classList.remove("arrowDown");
   }
 }
 
