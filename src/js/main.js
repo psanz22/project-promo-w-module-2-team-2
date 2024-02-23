@@ -55,6 +55,7 @@ function handleReset() {
   imagePreview.style.backgroundImage =
     "url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg')";
   thumbnail.style.backgroundImage = "url('')";
+  card.classList.remove('palette2', 'palette3');
 }
 
 formReset.addEventListener("click", handleReset);
