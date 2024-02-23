@@ -1,12 +1,11 @@
 .twitter {
-    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    padding: 20px 0 20px 0;
-    border-bottom: 1px solid #d8d8d8;
+    // padding: 20px 0 20px 0;
+    // border-bottom: 1px solid #d8d8d8;
     margin: 27px auto 30px auto;
 
     &__paragraph {
