@@ -99,9 +99,38 @@ const handleArrow3 = () => {
   close(containerDesign, containerFill);
 };
 
-headerDesign.addEventListener("click", handleArrow1);
-headerFill.addEventListener("click", handleArrow2);
-headerShare.addEventListener("click", handleArrow3);
+function arrowState() {
+  if (containerDesign.classList.contains("hidden")) {
+    arrowDesign.classList.remove("arrowDown");
+  } else {
+    arrowDesign.classList.add("arrowDown");
+  }
+  if (containerFill.classList.contains("hidden")) {
+    arrowFill.classList.remove("arrowDown");
+  } else {
+    arrowFill.classList.add("arrowDown");
+  }
+  if (containerShare.classList.contains("hidden")) {
+    arrowShare.classList.remove("arrowDown");
+  } else {
+    arrowShare.classList.add("arrowDown");
+  }
+}
+
+headerDesign.addEventListener("click", () => {
+  handleArrow1();
+  arrowState();
+});
+
+headerFill.addEventListener("click", () => {
+  handleArrow2();
+  arrowState();
+});
+
+headerShare.addEventListener("click", () => {
+  handleArrow3();
+  arrowState();
+});
 
 const object1 = {
   completeName: "",
@@ -133,6 +162,7 @@ function handleInput(event) {
 }
 form.addEventListener("input", handleInput);
 
+<<<<<<< HEAD
 
 // function handleContainer(event) {
 //   event.preventDefault();
@@ -143,4 +173,6 @@ form.addEventListener("input", handleInput);
 //   }
 // }
 
+=======
+>>>>>>> noelia
 import "./get-avatar.js";
