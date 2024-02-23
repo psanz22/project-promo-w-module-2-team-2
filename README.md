@@ -26,18 +26,26 @@ Luego, sigue estos pasos:
 
 ### Clona el repositorio
 
+```bash
 git clone https://github.com/psanz22/project-promo-w-module-2-team-2
+```
 
 ### Ingresa al directorio del proyecto
 
+```bash
 cd awesome-profile-cards
+```
 
 ### Instala las dependencias
 
+```bash
 npm install
+```
 
 ### Inicia el servidor de desarrollo
 
+```bash
 npm run dev
+```
 
 Ahora puedes abrir tu navegador y visitar http://localhost:3000 para ver la aplicación en acción.
