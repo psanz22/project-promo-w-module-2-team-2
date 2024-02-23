@@ -162,17 +162,4 @@ function handleInput(event) {
 }
 form.addEventListener("input", handleInput);
 
-<<<<<<< HEAD
-
-// function handleContainer(event) {
-//   event.preventDefault();
-//   if (containerFill.classList.contains("hidden")) {
-//     showContainer();
-//   } else {
-//     hideContainer();
-//   }
-// }
-
-=======
->>>>>>> noelia
 import "./get-avatar.js";
