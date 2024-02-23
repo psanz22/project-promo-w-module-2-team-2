@@ -26,7 +26,7 @@ Luego, sigue estos pasos:
 
 ### Clona el repositorio
 
-git clone https://github.com/tu-usuario/awesome-profile-cards.git
+git clone https://github.com/psanz22/project-promo-w-module-2-team-2
 
 ### Ingresa al directorio del proyecto
 
