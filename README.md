@@ -24,19 +24,19 @@ npm install -g create-vite
 
 Luego, sigue estos pasos:
 
-# Clona el repositorio
+### Clona el repositorio
 
 git clone https://github.com/tu-usuario/awesome-profile-cards.git
 
-# Ingresa al directorio del proyecto
+### Ingresa al directorio del proyecto
 
 cd awesome-profile-cards
 
-# Instala las dependencias
+### Instala las dependencias
 
 npm install
 
-# Inicia el servidor de desarrollo
+### Inicia el servidor de desarrollo
 
 npm run dev
 
