@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://kit.fontawesome.com/462915c8cb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        
+  <link rel="stylesheet" href="./assets/main-2f82689f.css">
+</head>
+<body>
+<header class="header">
+  <img
+    class="header__image"
+    src="https://cdn.zeplin.io/5c94ca7ad58aef056fdd6a67/assets/0581767E-3C28-405B-9B01-7A11F4EB814C.svg"
+    alt="logo"
+  />
+</header>
+
+<main>
+    <section class="section__card">
+  <div class="section__card--joined">
+    <button class="section__card--button js-reset"><i class="fa-regular fa-trash-can"></i> RESET</button>
+    <div class="section__card--container js-card">
+      <div class="card__text">
+        <h2 class="card__text--name js-name-preview">Nombre Apellido</h2>
+        <h3 class="card__text--job js-job-preview">Front-end developer</h3>
+      </div>
+      <div class="card__image js__profile-image js-image-preview"></div>
+      <ul class="card__socials">
+        <li class="card__socials--icon">
+          <a href="" class="js-phone-preview"><i class="fa-solid fa-mobile-screen-button"></i></a>
+        </li>
+        <li class="card__socials--icon">
+          <a href="" target="_blank" class="js-mail-preview"><i class="fa-regular fa-envelope"></i></a>
+        </li>
+        <li class="card__socials--icon">
+          <a href="" target="_blank" class="js-linkedin-preview"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li class="card__socials--icon">
+          <a href="" target="_blank" class="js-github-preview"><i class="fa-brands fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <form class="js-mainForm">
+  <div class="design">
+  <div class="design__titleContainer js-design">
+    <div class="design__titleContainer__h3">
+      <i class="fa-regular fa-object-ungroup ico"></i>
+      <h3>DISEÑA</h3>
+    </div>
+    <i class="fa-solid fa-chevron-up js-arrow1 arrowDown"></i>
+  </div>
+  <fieldset class="design__fieldset js-design-container">
+    <div class="design__container">
+      <div class="design__fieldset__title">COLORES</div>
+      <div class="design__fieldset__radioButtonsContainer js-checkForm">
+        <div class="radioButtonOne js-palette1">
+          <input class="js-checkOne" type="radio" id="paletteOne" name="colors" value="paletteOne" checked="checked" />
+          <div class="radioButtonOne__colorContainer">
+            <div class="squareColor radioButtonOne__colorContainer__one"></div>
+            <div class="squareColor radioButtonOne__colorContainer__two"></div>
+            <div class="squareColor radioButtonOne__colorContainer__three"></div>
+          </div>
+        </div>
+        <div class="radioButtonTwo">
+          <input class="js-checkTwo" type="radio" id="paletteTwo" name="colors" value="paletteTwo" />
+          <div class="radioButtonTwo__colorContainer">
+            <div class="squareColor radioButtonTwo__colorContainer__one"></div>
+            <div class="squareColor radioButtonTwo__colorContainer__two"></div>
+            <div class="squareColor radioButtonTwo__colorContainer__three"></div>
+          </div>
+        </div>
+        <div class="radioButtonThree">
+          <input class="js-checkThree" type="radio" id="paletteThree" name="colors" value="paletteThree" />
+          <div class="radioButtonThree__colorContainer">
+            <div class="squareColor radioButtonThree__colorContainer__one"></div>
+            <div class="squareColor radioButtonThree__colorContainer__two"></div>
+            <div class="squareColor radioButtonThree__colorContainer__three"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+  <div class="fill design">
+  <div class="design__titleContainer js-fill">
+    <div class="design__titleContainer__h3">
+      <i class="fa-regular fa-keyboard ico"></i>
+      <h3>RELLENA</h3>
+    </div>
+    <i class="fa-solid fa-chevron-up js-arrow2 arrowDown"></i>
+  </div>
+  <div class="design__fields js-fill-container hidden">
+    <fieldset class="js-form">
+      <label class="labelsText" for="completeName">Nombre completo</label>
+      <input
+        class="inputFields js-name"
+        id="completeName"
+        type="text"
+        name="completeName"
+        placeholder="Ej. Sally Jill"
+      />
+
+      <label class="labelsText" for="job">Puesto</label>
+      <input class="inputFields js-job" id="job" type="text" name="job" placeholder="Ej. Front-end unicorn" />
+
+      <label class="labelsText" for="avatar">Imagen de perfil</label>
+      <div class="addImage">
+        <label for="avatar" class="inputButton">Añadir imagen</label>
+        <input
+          class="hidden js__profile-upload-btn"
+          type="file"
+          id="avatar"
+          name="avatar"
+          accept="image/png, image/jpeg"
+        />
+        <div class="js__profile-preview thumbnail js-thumbnail"></div>
+      </div>
+
+      <label class="labelsText" for="email">Email</label>
+      <input class="inputFields js-mail" id="email" type="email" name="email" placeholder="Ej. sally-hill@gmail.com" />
+
+      <label class="labelsText" for="telephone">Teléfono</label>
+      <input class="inputFields js-phone" id="telephone" type="tel" name="telephone" placeholder="Ej. 555-55-55-55" />
+
+      <label class="labelsText" for="linkedin">Linkedin</label>
+      <input
+        class="inputFields js-linkedin"
+        id="linkedin"
+        type="url"
+        name="linkedin"
+        placeholder="Ej. linkedin.com/in/sallly.hill"
+      />
+
+      <label class="labelsText" for="github">Github</label>
+      <input class="inputFields js-github" id="github" type="url" name="github" placeholder="Ej. @sally-hill" />
+    </fieldset>
+  </div>
+</div>
+
+</form>
+<section class="share">
+
+    <div class="share__container js-share">
+        <div class="share__container--icon">
+            <i class="fa-solid fa-share-nodes"></i>
+            <p>COMPARTE</p>
+        </div>
+        <!-- <i id="arrow" class="fa-solid fa-angle-up js-arrow3 arrowDown"></i> -->
+        <i id="arrow" class="fa-solid fa-chevron-up js-arrow3 arrowDown"></i>
+    </div>
+    <div class="js-share-container hidden">
+        <div class="share__container--button ">
+            <button class="share__button"><i class="fa-regular fa-address-card"></i>CREAR TARJETA</button>
+        </div>
+        <section class="twitter">
+    <p class="twitter__paragraph">La tarjeta ha sido creada: </p>
+    <span class="twitter__link">https://awesome-profile-card.com?id=A456DF0001</span>
+        <div class="twitter__click">
+            <i class="fa-brands fa-twitter"></i>
+            <p><a href="#" target="_blank">Compartir en twitter</a></p>
+        </div>
+</section>
+
+    </div>
+
+</section>
+
+
+
+
+
+</main>
+<footer class="containerFooterCards">
+         <span class="containerFooterCards__text">Awesome profile-cards &copy; 2024</span>
+        <img class="containerFooterCards__logo" src="./images/logo-adalab.png" alt="adalab_logo" />
+</footer>
+
+    <script src="./js/main.js" type="text/javascript"></script>
+</body>
+</html>
