@@ -23,6 +23,7 @@ const thumbnail = document.querySelector(".js-thumbnail");
 const headerDesign = document.querySelector(".js-design");
 const headerFill = document.querySelector(".js-fill");
 const headerShare = document.querySelector(".js-share");
+const headersCollapsables = document.querySelectorAll('.js-header-collapsable');
 
 //Arrows
 const arrowDesign = document.querySelector(".js-arrow1"); // design
@@ -85,53 +86,46 @@ function close(content1, content2) {
   content2.classList.add("hidden");
 }
 
-const handleArrow1 = () => {
-  open(containerDesign);
-  close(containerFill, containerShare);
-};
-
-const handleArrow2 = () => {
-  open(containerFill);
-  close(containerDesign, containerShare);
-};
-
-const handleArrow3 = () => {
-  open(containerShare);
-  close(containerDesign, containerFill);
-};
-
 function arrowState() {
   if (containerDesign.classList.contains("hidden")) {
-    arrowDesign.classList.remove("arrowDown");
-  } else {
     arrowDesign.classList.add("arrowDown");
+  } else {
+    arrowDesign.classList.remove("arrowDown");
   }
   if (containerFill.classList.contains("hidden")) {
-    arrowFill.classList.remove("arrowDown");
-  } else {
     arrowFill.classList.add("arrowDown");
+  } else {
+    arrowFill.classList.remove("arrowDown");
   }
   if (containerShare.classList.contains("hidden")) {
-    arrowShare.classList.remove("arrowDown");
-  } else {
     arrowShare.classList.add("arrowDown");
+  } else {
+    arrowShare.classList.remove("arrowDown");
   }
 }
+const handleCollapsable = (event) => {
+  const headerClicked = event.currentTarget;
 
-headerDesign.addEventListener("click", () => {
-  handleArrow1();
+  if(headerClicked.classList.contains('js-design')){
+    open(containerDesign);
+    close(containerFill, containerShare);
+    
+  } else if(headerClicked.classList.contains('js-fill')){
+    open(containerFill);
+    close(containerDesign, containerShare);
+    
+  } else {
+    open(containerShare);
+    close(containerDesign, containerFill);
+    
+  }
   arrowState();
-});
+}
 
-headerFill.addEventListener("click", () => {
-  handleArrow2();
-  arrowState();
-});
+for (const headerCollapsable of headersCollapsables){
+  headerCollapsable.addEventListener ('click', handleCollapsable);
+}
 
-headerShare.addEventListener("click", () => {
-  handleArrow3();
-  arrowState();
-});
 
 const object1 = {
   completeName: "",
