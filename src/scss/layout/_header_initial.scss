@@ -5,7 +5,15 @@
     flex-direction: column;
     background-color: $colorGreyLight;
     &__logo{
-        margin-top: 90px;
+        margin-top: 15vh;
         width: 250px;
     }
+}
+
+@media screen and (min-width: 768px) {
+    .containerHeader__logo{
+      width: 419px;
+      margin-top: 350px;  
+    }
+    
 }
