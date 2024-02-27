@@ -1,3 +1,4 @@
+
 .section__card {
     background-color: lightblue;
     padding: 40px 35px 40px 45px;
@@ -140,12 +141,12 @@
     border-radius: 0.4rem;
     margin: 20px 40px 20px 30px;
     height: 75vh;
+    display: flex;
+    justify-content: center;
     
    }
    .container-form {
     min-width: 400px;
    }
-   .section__card--joined {
-    margin-top: 50%;
-   }
+   
 }
