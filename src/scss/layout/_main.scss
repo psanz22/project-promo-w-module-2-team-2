@@ -1,14 +1,16 @@
 
-body{
+.body-landing{
     background-color: $colorGreyLight;
     height: 100vh;
+  
 
 }
 .containerMain{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: $colorGreyLight;
+
+    
     
     &__title{
         font-family: $fontPrimary;
@@ -56,6 +58,7 @@ body{
         border-radius: 25px;
         text-align: center;
         padding: 10px 20px;
+
 
     }
 }

@@ -128,3 +128,24 @@
     } 
 }
 
+@media screen and (min-width: 768px){
+   .main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+   }
+   .section__card {
+    flex-grow: 1;
+    border-radius: 0.4rem;
+    margin: 20px 40px 20px 30px;
+    height: 75vh;
+    
+   }
+   .container-form {
+    min-width: 400px;
+   }
+   .section__card--joined {
+    margin-top: 50%;
+   }
+}
