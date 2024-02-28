@@ -23,7 +23,6 @@ const thumbnail = document.querySelector(".js-thumbnail");
 const headerDesign = document.querySelector(".js-design");
 const headerFill = document.querySelector(".js-fill");
 const headerShare = document.querySelector(".js-share");
-const headersCollapsables = document.querySelectorAll('.js-header-collapsable');
 
 //Arrows
 const arrowDesign = document.querySelector(".js-arrow1"); // design
@@ -56,7 +55,7 @@ function handleReset() {
   imagePreview.style.backgroundImage =
     "url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg')";
   thumbnail.style.backgroundImage = "url('')";
-  card.classList.remove('palette2', 'palette3');
+  card.classList.remove("palette2", "palette3");
 }
 
 formReset.addEventListener("click", handleReset);
@@ -77,7 +76,7 @@ function colorPalettes() {
 
 checkForm.addEventListener("click", colorPalettes);
 
-function open(content) {
+/* function open(content) {
   content.classList.toggle("hidden");
 }
 
@@ -86,47 +85,70 @@ function close(content1, content2) {
   content2.classList.add("hidden");
 }
 
+const handleArrow1 = () => {
+  open(containerDesign);
+  close(containerFill, containerShare);
+};
+
+const handleArrow2 = () => {
+  open(containerFill);
+  close(containerDesign, containerShare);
+};
+
+const handleArrow3 = () => {
+  open(containerShare);
+  close(containerDesign, containerFill);
+};
+
 function arrowState() {
   if (containerDesign.classList.contains("hidden")) {
-    arrowDesign.classList.add("arrowDown");
-  } else {
     arrowDesign.classList.remove("arrowDown");
+  } else {
+    arrowDesign.classList.add("arrowDown");
   }
   if (containerFill.classList.contains("hidden")) {
-    arrowFill.classList.add("arrowDown");
-  } else {
     arrowFill.classList.remove("arrowDown");
+  } else {
+    arrowFill.classList.add("arrowDown");
   }
   if (containerShare.classList.contains("hidden")) {
-    arrowShare.classList.add("arrowDown");
-  } else {
     arrowShare.classList.remove("arrowDown");
-  }
-}
-const handleCollapsable = (event) => {
-  const headerClicked = event.currentTarget;
-
-  if(headerClicked.classList.contains('js-design')){
-    open(containerDesign);
-    close(containerFill, containerShare);
-    
-  } else if(headerClicked.classList.contains('js-fill')){
-    open(containerFill);
-    close(containerDesign, containerShare);
-    
   } else {
-    open(containerShare);
-    close(containerDesign, containerFill);
-    
+    arrowShare.classList.add("arrowDown");
   }
+}
+
+headerDesign.addEventListener("click", () => {
+  handleArrow1();
   arrowState();
+});
+
+headerFill.addEventListener("click", () => {
+  handleArrow2();
+  arrowState();
+});
+
+headerShare.addEventListener("click", () => {
+  handleArrow3();
+  arrowState();
+}); */
+
+const collapsableHeaders = document.querySelectorAll(".js-collapsable-header");
+
+function handleCollapsable(event) {
+  const clickHeader = event.currentTarget;
+
+  for (const collapsable of collapsableHeaders) {
+    if (collapsable === clickHeader) {
+      collapsable.classList.toggle("collapsable--close");
+    } else {
+      collapsable.classList.add("collapsable--close");
+    }
+  }
 }
-
-for (const headerCollapsable of headersCollapsables){
-  headerCollapsable.addEventListener ('click', handleCollapsable);
+for (let i = 0; i < 3; i++) {
+  collapsableHeaders[i].addEventListener("click", handleCollapsable);
 }
-
-
 const object1 = {
   completeName: "",
   job: "",

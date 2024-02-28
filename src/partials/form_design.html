@@ -1,24 +1,17 @@
-<div class="design">
-  <div class="design__titleContainer js-design js-header-collapsable">
+<section class="design js-collapsable-header">
+  <div class="design__titleContainer js-design">
     <div class="design__titleContainer__h3">
       <i class="fa-regular fa-object-ungroup ico"></i>
       <h3>DISEÑA</h3>
     </div>
-    <i class="fa-solid fa-chevron-up js-arrow1"></i>
+    <i class="fa-solid fa-chevron-up js-arrow collapsable--icon-right"></i>
   </div>
-  <fieldset class="design__fieldset js-design-container">
+  <fieldset class="design__fieldset js-design-container collapsable-content">
     <div class="design__container">
       <div class="design__fieldset__title">COLORES</div>
       <div class="design__fieldset__radioButtonsContainer js-checkForm">
         <div class="radioButtonOne js-palette1">
-          <input
-            class="js-checkOne"
-            type="radio"
-            id="paletteOne"
-            name="colors"
-            value="paletteOne"
-            checked="checked"
-          />
+          <input class="js-checkOne" type="radio" id="paletteOne" name="colors" value="paletteOne" checked="checked" />
           <div class="radioButtonOne__colorContainer">
             <div class="squareColor radioButtonOne__colorContainer__one"></div>
             <div class="squareColor radioButtonOne__colorContainer__two"></div>
@@ -26,13 +19,7 @@
           </div>
         </div>
         <div class="radioButtonTwo">
-          <input
-            class="js-checkTwo"
-            type="radio"
-            id="paletteTwo"
-            name="colors"
-            value="paletteTwo"
-          />
+          <input class="js-checkTwo" type="radio" id="paletteTwo" name="colors" value="paletteTwo" />
           <div class="radioButtonTwo__colorContainer">
             <div class="squareColor radioButtonTwo__colorContainer__one"></div>
             <div class="squareColor radioButtonTwo__colorContainer__two"></div>
@@ -40,13 +27,7 @@
           </div>
         </div>
         <div class="radioButtonThree">
-          <input
-            class="js-checkThree"
-            type="radio"
-            id="paletteThree"
-            name="colors"
-            value="paletteThree"
-          />
+          <input class="js-checkThree" type="radio" id="paletteThree" name="colors" value="paletteThree" />
           <div class="radioButtonThree__colorContainer">
             <div class="squareColor radioButtonThree__colorContainer__one"></div>
             <div class="squareColor radioButtonThree__colorContainer__two"></div>
@@ -56,4 +37,4 @@
       </div>
     </div>
   </fieldset>
-</div>
+</section>
