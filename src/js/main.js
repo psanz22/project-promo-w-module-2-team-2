@@ -55,7 +55,7 @@ function handleReset() {
   imagePreview.style.backgroundImage =
     "url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg')";
   thumbnail.style.backgroundImage = "url('')";
-  card.classList.remove('palette2', 'palette3');
+  card.classList.remove("palette2", "palette3");
 }
 
 formReset.addEventListener("click", handleReset);
@@ -76,7 +76,7 @@ function colorPalettes() {
 
 checkForm.addEventListener("click", colorPalettes);
 
-function open(content) {
+/* function open(content) {
   content.classList.toggle("hidden");
 }
 
@@ -131,8 +131,24 @@ headerFill.addEventListener("click", () => {
 headerShare.addEventListener("click", () => {
   handleArrow3();
   arrowState();
-});
+}); */
 
+const collapsableHeaders = document.querySelectorAll(".js-collapsable-header");
+
+function handleCollapsable(event) {
+  const clickHeader = event.currentTarget;
+
+  for (const collapsable of collapsableHeaders) {
+    if (collapsable === clickHeader) {
+      collapsable.classList.toggle("collapsable--close");
+    } else {
+      collapsable.classList.add("collapsable--close");
+    }
+  }
+}
+for (let i = 0; i < 3; i++) {
+  collapsableHeaders[i].addEventListener("click", handleCollapsable);
+}
 const object1 = {
   completeName: "",
   job: "",
