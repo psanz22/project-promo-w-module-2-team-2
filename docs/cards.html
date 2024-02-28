@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         
-  <link rel="stylesheet" href="./assets/main-2f82689f.css">
+  <link rel="stylesheet" href="./assets/main-ae8ef01d.css">
 </head>
 <body>
 <header class="header">
@@ -49,15 +49,15 @@
 </section>
 
     <form class="js-mainForm">
-  <div class="design">
+  <section class="design js-collapsable-header">
   <div class="design__titleContainer js-design">
     <div class="design__titleContainer__h3">
       <i class="fa-regular fa-object-ungroup ico"></i>
       <h3>DISEÑA</h3>
     </div>
-    <i class="fa-solid fa-chevron-up js-arrow1 arrowDown"></i>
+    <i class="fa-solid fa-chevron-up js-arrow collapsable--icon-right"></i>
   </div>
-  <fieldset class="design__fieldset js-design-container">
+  <fieldset class="design__fieldset js-design-container collapsable-content">
     <div class="design__container">
       <div class="design__fieldset__title">COLORES</div>
       <div class="design__fieldset__radioButtonsContainer js-checkForm">
@@ -88,25 +88,20 @@
       </div>
     </div>
   </fieldset>
-</div>
-  <div class="fill design">
+</section>
+  <section class="fill design collapsable--close js-collapsable-header">
   <div class="design__titleContainer js-fill">
     <div class="design__titleContainer__h3">
       <i class="fa-regular fa-keyboard ico"></i>
       <h3>RELLENA</h3>
     </div>
-    <i class="fa-solid fa-chevron-up js-arrow2 arrowDown"></i>
+    <i class="fa-solid fa-chevron-up js-arrow2 collapsable--icon-right"></i>
   </div>
-  <div class="design__fields js-fill-container hidden">
+  <div class="design__fields js-fill-container collapsable-content">
     <fieldset class="js-form">
       <label class="labelsText" for="completeName">Nombre completo</label>
-      <input
-        class="inputFields js-name"
-        id="completeName"
-        type="text"
-        name="completeName"
-        placeholder="Ej. Sally Jill"
-      />
+      <input class="inputFields js-name" id="completeName" type="text" name="completeName"
+        placeholder="Ej. Sally Jill" />
 
       <label class="labelsText" for="job">Puesto</label>
       <input class="inputFields js-job" id="job" type="text" name="job" placeholder="Ej. Front-end unicorn" />
@@ -114,13 +109,8 @@
       <label class="labelsText" for="avatar">Imagen de perfil</label>
       <div class="addImage">
         <label for="avatar" class="inputButton">Añadir imagen</label>
-        <input
-          class="hidden js__profile-upload-btn"
-          type="file"
-          id="avatar"
-          name="avatar"
-          accept="image/png, image/jpeg"
-        />
+        <input class="hidden js__profile-upload-btn" type="file" id="avatar" name="avatar"
+          accept="image/png, image/jpeg" />
         <div class="js__profile-preview thumbnail js-thumbnail"></div>
       </div>
 
@@ -131,32 +121,23 @@
       <input class="inputFields js-phone" id="telephone" type="tel" name="telephone" placeholder="Ej. 555-55-55-55" />
 
       <label class="labelsText" for="linkedin">Linkedin</label>
-      <input
-        class="inputFields js-linkedin"
-        id="linkedin"
-        type="url"
-        name="linkedin"
-        placeholder="Ej. linkedin.com/in/sallly.hill"
-      />
+      <input class="inputFields js-linkedin" id="linkedin" type="url" name="linkedin"
+        placeholder="Ej. linkedin.com/in/sallly.hill" />
 
       <label class="labelsText" for="github">Github</label>
       <input class="inputFields js-github" id="github" type="url" name="github" placeholder="Ej. @sally-hill" />
     </fieldset>
   </div>
-</div>
-
-</form>
-<section class="share">
-
+</section>
+  <section class="share collapsable--close js-collapsable-header">
     <div class="share__container js-share">
         <div class="share__container--icon">
             <i class="fa-solid fa-share-nodes"></i>
             <p>COMPARTE</p>
         </div>
-        <!-- <i id="arrow" class="fa-solid fa-angle-up js-arrow3 arrowDown"></i> -->
-        <i id="arrow" class="fa-solid fa-chevron-up js-arrow3 arrowDown"></i>
+        <i id="arrow" class="fa-solid fa-chevron-up js-arrow3 collapsable--icon-right"></i>
     </div>
-    <div class="js-share-container hidden">
+    <div class="js-share-container collapsable-content">
         <div class="share__container--button ">
             <button class="share__button"><i class="fa-regular fa-address-card"></i>CREAR TARJETA</button>
         </div>
@@ -170,9 +151,8 @@
 </section>
 
     </div>
-
 </section>
-
+</form>
 
 
 
