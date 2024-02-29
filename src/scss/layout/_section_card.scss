@@ -1,3 +1,10 @@
+.body-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, $colorGreyLight, $colorWhite);
+}
 
 .section__card {
     background-color: lightblue;
@@ -6,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 27px;
+    
 
 
     &--button {
@@ -18,6 +26,7 @@
         border-radius: 20px;
         max-width: 75px;
         margin-bottom: 20px;
+        cursor: pointer;
         & i {
             margin-right: 5px;
         }

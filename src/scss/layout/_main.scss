@@ -2,6 +2,9 @@
 .body-landing{
     background-color: $colorGreyLight;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 .containerMain{
@@ -73,6 +76,6 @@
         }
     }
     .containerMain__button {
-        margin-top: 10%;
+        margin-bottom: 5%;
     }
 }
