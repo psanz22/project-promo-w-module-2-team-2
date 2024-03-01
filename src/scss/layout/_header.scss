@@ -1,4 +1,9 @@
-.header__image {
-    margin: 30px auto 30px 40px;
-    max-height: 50px;
+.header{
+    background-color: $colorWhite;
+
+    &__image {
+        margin: 30px auto 30px 40px;
+        max-height: 50px;
+    }
 }
+

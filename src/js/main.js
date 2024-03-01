@@ -23,6 +23,7 @@ const thumbnail = document.querySelector(".js-thumbnail");
 const headerDesign = document.querySelector(".js-design");
 const headerFill = document.querySelector(".js-fill");
 const headerShare = document.querySelector(".js-share");
+const headersCollapsables = document.querySelectorAll(".js-header-collapsable");
 
 //Arrows
 const arrowDesign = document.querySelector(".js-arrow1"); // design
@@ -44,8 +45,8 @@ const checkThree = document.querySelector(".js-checkThree");
 const formReset = document.querySelector(".js-reset");
 const mainForm = document.querySelector(".js-mainForm");
 
-const createButton = document.querySelector('.js-create-button');
-const cardLink = document.querySelector('.js-link');
+const createButton = document.querySelector(".js-create-button");
+const cardLink = document.querySelector(".js-link");
 
 let data = {
   palette: "",
@@ -79,22 +80,22 @@ const checkForm = document.querySelector(".js-checkForm");
 function colorPalettes() {
   if (checkOne.checked) {
     card.classList.remove("palette2", "palette3");
-    data.palette = '1';
+    data.palette = "1";
   } else if (checkTwo.checked) {
     card.classList.add("palette2");
     card.classList.remove("palette3");
-    data.palette = '2';
+    data.palette = "2";
   } else if (checkThree.checked) {
     card.classList.add("palette3");
     card.classList.remove("palette2");
-    data.palette = '3';
+    data.palette = "3";
   }
 }
 
 checkForm.addEventListener("click", colorPalettes);
 
 const collapsableHeaders = document.querySelectorAll(".js-collapsable-header");
-const collapsableParents = document.querySelectorAll('.js-form-box');
+const collapsableParents = document.querySelectorAll(".js-form-box");
 
 function handleCollapsable(event) {
   const clickHeader = event.currentTarget;
@@ -102,9 +103,7 @@ function handleCollapsable(event) {
 
   console.log(clickedParent);
 
-
   for (const collapsableParent of collapsableParents) {
-    
     if (collapsableParent === clickedParent) {
       collapsableParent.classList.toggle("collapsable--close");
     } else {
@@ -138,7 +137,6 @@ function handleInput(event) {
   } else if (idInput === "github") {
     githubPreview.href = eventTarget;
     data.github = eventTarget;
-
   }
 }
 form.addEventListener("input", handleInput);
@@ -146,20 +144,20 @@ form.addEventListener("input", handleInput);
 
 const handleCreate = (event) => {
   event.preventDefault();
-  data.photo = `${fr.result}`
-  console.log(data)
+  data.photo = `${fr.result}`;
+  console.log(data);
 
-  fetch('https://dev.adalab.es/api/card/', {
-    method: 'POST',
+  fetch("https://dev.adalab.es/api/card/", {
+    method: "POST",
     body: JSON.stringify(data),
-    headers: {'content-type': 'aplication/json'},
+    headers: { "content-type": "aplication/json" },
   })
-  .then((response) => response.json())
-  .then(data => {
-    console.log(data)
-  })
-}
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+};
 
-createButton.addEventListener('click', handleCreate)
+createButton.addEventListener("click", handleCreate);
 
 import "./get-avatar.js";

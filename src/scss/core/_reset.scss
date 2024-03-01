@@ -5,19 +5,14 @@
   list-style: none;
   text-decoration: none;
 }
+a {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
 
 .arrowDown {
   transform: rotate(180deg);
-}
-
-.collapsable--close{
-  .collapsable--icon-right{
-    transform: rotate(180deg);
-  }
-  .collapsable-content{
-    display: none;
-  }
 }
