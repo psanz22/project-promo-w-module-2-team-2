@@ -94,20 +94,26 @@ function colorPalettes() {
 checkForm.addEventListener("click", colorPalettes);
 
 const collapsableHeaders = document.querySelectorAll(".js-collapsable-header");
+const collapsableParents = document.querySelectorAll('.js-form-box');
 
 function handleCollapsable(event) {
   const clickHeader = event.currentTarget;
+  const clickedParent = clickHeader.parentNode;
 
-  // for (const collapsable of collapsableHeaders) {
-  //   if (collapsable === clickHeader) {
-  //     collapsable.classList.toggle("collapsable--close");
-  //   } else {
-  //     collapsable.classList.add("collapsable--close");
-  //   }
-  // }
+  console.log(clickedParent);
+
+
+  for (const collapsableParent of collapsableParents) {
+    
+    if (collapsableParent === clickedParent) {
+      collapsableParent.classList.toggle("collapsable--close");
+    } else {
+      collapsableParent.classList.add("collapsable--close");
+    }
+  }
 }
-for (let i = 0; i < 3; i++) {
-  collapsableHeaders[i].addEventListener("click", handleCollapsable);
+for (const collapsableHeader of collapsableHeaders) {
+  collapsableHeader.addEventListener("click", handleCollapsable);
 }
 
 function handleInput(event) {
@@ -136,7 +142,7 @@ function handleInput(event) {
   }
 }
 form.addEventListener("input", handleInput);
-console.log(data);
+// console.log(data);
 
 const handleCreate = (event) => {
   event.preventDefault();
