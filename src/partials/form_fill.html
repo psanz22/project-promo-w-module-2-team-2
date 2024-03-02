@@ -1,14 +1,18 @@
-<div class="fill design">
-  <div class="design__titleContainer js-fill js-header-collapsable">
+<section class="fill design js-form-box collapsable--close">
+  <div class="design__titleContainer js-fill js-collapsable-header">
     <div class="design__titleContainer__h3">
       <i class="fa-regular fa-keyboard ico"></i>
       <h3>RELLENA</h3>
     </div>
-    <i class="fa-solid fa-chevron-up js-arrow2 arrowDown"></i>
+    <i class="fa-solid fa-chevron-up js-arrow2 collapsable--icon-right"></i>
   </div>
-  <div class="design__fields js-fill-container hidden">
+  <div class="design__fields js-fill-container collapsable-content">
     <fieldset class="js-form">
-      <label class="labelsText" for="completeName">Nombre completo</label>
+      <label
+        class="labelsText"
+        for="completeName"
+        >Nombre completo</label
+      >
       <input
         class="inputFields js-name"
         id="completeName"
@@ -17,7 +21,11 @@
         placeholder="Ej. Sally Jill"
       />
 
-      <label class="labelsText" for="job">Puesto</label>
+      <label
+        class="labelsText"
+        for="job"
+        >Puesto</label
+      >
       <input
         class="inputFields js-job"
         id="job"
@@ -26,9 +34,17 @@
         placeholder="Ej. Front-end unicorn"
       />
 
-      <label class="labelsText" for="avatar">Imagen de perfil</label>
+      <label
+        class="labelsText"
+        for="avatar"
+        >Imagen de perfil</label
+      >
       <div class="addImage">
-        <label for="avatar" class="inputButton">Añadir imagen</label>
+        <label
+          for="avatar"
+          class="inputButton"
+          >Añadir imagen</label
+        >
         <input
           class="hidden js__profile-upload-btn"
           type="file"
@@ -39,7 +55,11 @@
         <div class="js__profile-preview thumbnail js-thumbnail"></div>
       </div>
 
-      <label class="labelsText" for="email">Email</label>
+      <label
+        class="labelsText"
+        for="email"
+        >Email</label
+      >
       <input
         class="inputFields js-mail"
         id="email"
@@ -48,7 +68,11 @@
         placeholder="Ej. sally-hill@gmail.com"
       />
 
-      <label class="labelsText" for="telephone">Teléfono</label>
+      <label
+        class="labelsText"
+        for="telephone"
+        >Teléfono</label
+      >
       <input
         class="inputFields js-phone"
         id="telephone"
@@ -57,7 +81,11 @@
         placeholder="Ej. 555-55-55-55"
       />
 
-      <label class="labelsText" for="linkedin">Linkedin</label>
+      <label
+        class="labelsText"
+        for="linkedin"
+        >Linkedin</label
+      >
       <input
         class="inputFields js-linkedin"
         id="linkedin"
@@ -66,7 +94,11 @@
         placeholder="Ej. linkedin.com/in/sallly.hill"
       />
 
-      <label class="labelsText" for="github">Github</label>
+      <label
+        class="labelsText"
+        for="github"
+        >Github</label
+      >
       <input
         class="inputFields js-github"
         id="github"
@@ -76,4 +108,4 @@
       />
     </fieldset>
   </div>
-</div>
+</section>
