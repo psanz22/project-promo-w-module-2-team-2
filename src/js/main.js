@@ -47,9 +47,12 @@ const mainForm = document.querySelector(".js-mainForm");
 
 const createButton = document.querySelector(".js-create-button");
 const cardLink = document.querySelector(".js-link");
+const twitterSection = document.querySelector(".js-twitter");
+
+let localStorageData = JSON.parse(localStorage.getItem("localStorageData"));
 
 let data = {
-  palette: "",
+  palette: "1",
   name: "",
   job: "",
   phone: "",
@@ -58,6 +61,21 @@ let data = {
   github: "",
   photo: "",
 };
+
+if (localStorageData !== null) {
+  data = localStorageData;
+} else {
+  data = {
+    palette: "1",
+    name: "",
+    job: "",
+    phone: "",
+    email: "",
+    linkedin: "",
+    github: "",
+    photo: "",
+  };
+}
 
 function handleReset() {
   mainForm.reset();
@@ -71,6 +89,7 @@ function handleReset() {
     "url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg')";
   thumbnail.style.backgroundImage = "url('')";
   card.classList.remove("palette2", "palette3");
+  localStorage.removeItem("localStorageData");
 }
 
 formReset.addEventListener("click", handleReset);
@@ -144,8 +163,15 @@ form.addEventListener("input", handleInput);
 
 const handleCreate = (event) => {
   event.preventDefault();
-  data.photo = `${fr.result}`;
-  //console.log(data);
+  if (data.photo === null) {
+    data.photo = `${fr.result}`;
+    console.log("data photo es ", data.photo);
+  }
+  console.log(data);
+  localStorageData = localStorage.setItem(
+    "localStorageData",
+    JSON.stringify(data)
+  );
 
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
@@ -155,6 +181,9 @@ const handleCreate = (event) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      cardLink.innerHTML = `${data.cardURL}`;
+      cardLink.href = `${data.cardURL}`;
+      twitterSection.classList.remove("hidden");
     });
 };
 
