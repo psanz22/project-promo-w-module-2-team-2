@@ -161,18 +161,7 @@ function handleInput(event) {
 form.addEventListener("input", handleInput);
 // console.log(data);
 
-const handleCreate = (event) => {
-  event.preventDefault();
-  if (data.photo === null) {
-    data.photo = `${fr.result}`;
-    console.log("data photo es ", data.photo);
-  }
-  console.log(data);
-  localStorageData = localStorage.setItem(
-    "localStorageData",
-    JSON.stringify(data)
-  );
-
+function fetchData() {
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
     body: JSON.stringify(data),
@@ -184,7 +173,17 @@ const handleCreate = (event) => {
       cardLink.innerHTML = `${data.cardURL}`;
       cardLink.href = `${data.cardURL}`;
       twitterSection.classList.remove("hidden");
+      localStorage.setItem("localStorageData", JSON.stringify(data));
     });
+}
+const dataLocalStorages = JSON.parse(localStorage.getItem("localStorageData"));
+const handleCreate = (event) => {
+  event.preventDefault();
+  if (dataLocalStorages === null) {
+    fetchData();
+  } else {
+    console.log("vacío");
+  }
 };
 
 createButton.addEventListener("click", handleCreate);
