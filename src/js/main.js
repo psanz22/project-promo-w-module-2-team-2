@@ -119,7 +119,7 @@ function handleInput(event) {
   const eventTarget = event.target.value;
   const idInput = event.target.id;
   data[idInput] = event.target.value;
-  if (idInput === "completeName") {
+  if (idInput === "name") {
     namePreview.innerHTML = eventTarget;
     data.name = eventTarget;
   } else if (idInput === "job") {
