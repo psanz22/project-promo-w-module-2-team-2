@@ -145,12 +145,12 @@ form.addEventListener("input", handleInput);
 const handleCreate = (event) => {
   event.preventDefault();
   data.photo = `${fr.result}`;
-  console.log(data);
+  //console.log(data);
 
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
     body: JSON.stringify(data),
-    headers: { "content-type": "aplication/json" },
+    headers: { "content-type": "application/json" },
   })
     .then((response) => response.json())
     .then((data) => {
