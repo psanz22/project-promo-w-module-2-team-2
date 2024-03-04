@@ -48,6 +48,7 @@ const mainForm = document.querySelector(".js-mainForm");
 const createButton = document.querySelector(".js-create-button");
 const cardLink = document.querySelector(".js-link");
 const twitterSection = document.querySelector(".js-twitter");
+const twitterShareButton = document.querySelector(".js-twitter-share-button");
 
 let localStorageData = JSON.parse(localStorage.getItem("localStorageData"));
 
@@ -184,6 +185,7 @@ const handleCreate = (event) => {
       cardLink.innerHTML = `${data.cardURL}`;
       cardLink.href = `${data.cardURL}`;
       twitterSection.classList.remove("hidden");
+      twitterShareButton.href = `https://twitter.com/intent/tweet?text=${data.cardURL}`;
     });
 };
 
