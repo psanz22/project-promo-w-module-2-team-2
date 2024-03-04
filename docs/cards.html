@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <script src="https://kit.fontawesome.com/462915c8cb.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-        
-  <link rel="stylesheet" href="./assets/main-2f82689f.css">
-</head>
-<body>
-<header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Awesome profile-cards</title>
+    <script
+      src="https://kit.fontawesome.com/462915c8cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="./assets/main-29f0dd27.css">
+  </head>
+  <body class="body-cards">
+    <header class="header">
   <img
     class="header__image"
-    src="https://cdn.zeplin.io/5c94ca7ad58aef056fdd6a67/assets/0581767E-3C28-405B-9B01-7A11F4EB814C.svg"
+    src="./images/logo.svg"
     alt="logo"
   />
 </header>
 
-<main>
-    <section class="section__card">
+    <main class="main-cards">
+      <div class="main-container">
+        <section class="section__card">
   <div class="section__card--joined">
     <button class="section__card--button js-reset"><i class="fa-regular fa-trash-can"></i> RESET</button>
     <div class="section__card--container js-card">
@@ -48,141 +65,161 @@
   </div>
 </section>
 
-    <form class="js-mainForm">
-  <div class="design">
-  <div class="design__titleContainer js-design">
+        <form class="js-mainForm container-form">
+  <section class="design js-form-box">
+  <div class="design__titleContainer js-design js-collapsable-header">
     <div class="design__titleContainer__h3">
       <i class="fa-regular fa-object-ungroup ico"></i>
       <h3>DISEÑA</h3>
     </div>
-    <i class="fa-solid fa-chevron-up js-arrow1 arrowDown"></i>
+    <i class="fa-solid fa-chevron-up js-arrow collapsable--icon-right"></i>
   </div>
-  <fieldset class="design__fieldset js-design-container">
+  <fieldset class="design__fieldset js-design-container collapsable-content">
     <div class="design__container">
       <div class="design__fieldset__title">COLORES</div>
       <div class="design__fieldset__radioButtonsContainer js-checkForm">
         <div class="radioButtonOne js-palette1">
-          <input class="js-checkOne" type="radio" id="paletteOne" name="colors" value="paletteOne" checked="checked" />
+          <input
+            class="js-checkOne"
+            type="radio"
+            id="paletteOne"
+            name="colors"
+            value="paletteOne"
+            checked="checked"
+          />
           <div class="radioButtonOne__colorContainer">
             <div class="squareColor radioButtonOne__colorContainer__one"></div>
             <div class="squareColor radioButtonOne__colorContainer__two"></div>
-            <div class="squareColor radioButtonOne__colorContainer__three"></div>
+            <div
+              class="squareColor radioButtonOne__colorContainer__three"
+            ></div>
           </div>
         </div>
         <div class="radioButtonTwo">
-          <input class="js-checkTwo" type="radio" id="paletteTwo" name="colors" value="paletteTwo" />
+          <input
+            class="js-checkTwo"
+            type="radio"
+            id="paletteTwo"
+            name="colors"
+            value="paletteTwo"
+          />
           <div class="radioButtonTwo__colorContainer">
             <div class="squareColor radioButtonTwo__colorContainer__one"></div>
             <div class="squareColor radioButtonTwo__colorContainer__two"></div>
-            <div class="squareColor radioButtonTwo__colorContainer__three"></div>
+            <div
+              class="squareColor radioButtonTwo__colorContainer__three"
+            ></div>
           </div>
         </div>
         <div class="radioButtonThree">
-          <input class="js-checkThree" type="radio" id="paletteThree" name="colors" value="paletteThree" />
+          <input
+            class="js-checkThree"
+            type="radio"
+            id="paletteThree"
+            name="colors"
+            value="paletteThree"
+          />
           <div class="radioButtonThree__colorContainer">
-            <div class="squareColor radioButtonThree__colorContainer__one"></div>
-            <div class="squareColor radioButtonThree__colorContainer__two"></div>
-            <div class="squareColor radioButtonThree__colorContainer__three"></div>
+            <div
+              class="squareColor radioButtonThree__colorContainer__one"
+            ></div>
+            <div
+              class="squareColor radioButtonThree__colorContainer__two"
+            ></div>
+            <div
+              class="squareColor radioButtonThree__colorContainer__three"
+            ></div>
           </div>
         </div>
       </div>
     </div>
   </fieldset>
-</div>
-  <div class="fill design">
-  <div class="design__titleContainer js-fill">
+</section>
+
+  <section class="fill design js-form-box collapsable--close">
+  <div class="design__titleContainer js-fill js-collapsable-header">
     <div class="design__titleContainer__h3">
       <i class="fa-regular fa-keyboard ico"></i>
       <h3>RELLENA</h3>
     </div>
-    <i class="fa-solid fa-chevron-up js-arrow2 arrowDown"></i>
+    <i class="fa-solid fa-chevron-up js-arrow2 collapsable--icon-right"></i>
   </div>
-  <div class="design__fields js-fill-container hidden">
+  <div class="design__fields js-fill-container collapsable-content">
     <fieldset class="js-form">
-      <label class="labelsText" for="completeName">Nombre completo</label>
-      <input
-        class="inputFields js-name"
-        id="completeName"
-        type="text"
-        name="completeName"
-        placeholder="Ej. Sally Jill"
-      />
+      <label class="labelsText" for="name">Nombre completo</label>
+      <input class="inputFields js-name" id="name" type="text" name="name" placeholder="Ej. Sally Jill" />
 
       <label class="labelsText" for="job">Puesto</label>
       <input class="inputFields js-job" id="job" type="text" name="job" placeholder="Ej. Front-end unicorn" />
 
-      <label class="labelsText" for="avatar">Imagen de perfil</label>
+      <label class="labelsText" for="photo">Imagen de perfil</label>
       <div class="addImage">
-        <label for="avatar" class="inputButton">Añadir imagen</label>
-        <input
-          class="hidden js__profile-upload-btn"
-          type="file"
-          id="avatar"
-          name="avatar"
-          accept="image/png, image/jpeg"
-        />
+        <label for="photo" class="inputButton">Añadir imagen</label>
+        <input class="hidden js__profile-upload-btn" type="file" id="photo" name="photo"
+          accept="image/png, image/jpeg" />
         <div class="js__profile-preview thumbnail js-thumbnail"></div>
       </div>
 
       <label class="labelsText" for="email">Email</label>
       <input class="inputFields js-mail" id="email" type="email" name="email" placeholder="Ej. sally-hill@gmail.com" />
 
-      <label class="labelsText" for="telephone">Teléfono</label>
-      <input class="inputFields js-phone" id="telephone" type="tel" name="telephone" placeholder="Ej. 555-55-55-55" />
+      <label class="labelsText" for="phone">Teléfono</label>
+      <input class="inputFields js-phone" id="phone" type="tel" name="phone" placeholder="Ej. 555-55-55-55" />
 
       <label class="labelsText" for="linkedin">Linkedin</label>
-      <input
-        class="inputFields js-linkedin"
-        id="linkedin"
-        type="url"
-        name="linkedin"
-        placeholder="Ej. linkedin.com/in/sallly.hill"
-      />
+      <input class="inputFields js-linkedin" id="linkedin" type="url" name="linkedin"
+        placeholder="Ej. linkedin.com/in/sallly.hill" />
 
       <label class="labelsText" for="github">Github</label>
       <input class="inputFields js-github" id="github" type="url" name="github" placeholder="Ej. @sally-hill" />
     </fieldset>
   </div>
-</div>
+</section>
+  <section class="share js-form-box collapsable--close">
+  <div class="share__container js-share js-collapsable-header">
+    <div class="share__container--icon">
+      <i class="fa-solid fa-share-nodes"></i>
+      <p>COMPARTE</p>
+    </div>
+    <i
+      id="arrow"
+      class="fa-solid fa-chevron-up js-arrow3 collapsable--icon-right"
+    ></i>
+  </div>
+  <div class="js-share-container collapsable-content">
+    <div class="share__container--button">
+      <button class="share__button js-create-button">
+        <i class="fa-regular fa-address-card"></i>CREAR TARJETA
+      </button>
+    </div>
+    <section class="js-twitter hidden">
+  <div class="twitter">
+    <p class="twitter__paragraph">La tarjeta ha sido creada:</p>
+    <a class="twitter__link js-link" target="_blank" href="">https://awesome-profile-card.com?id=A456DF0001</a>
+    <div class="twitter__click">
+      <i class="fa-brands fa-twitter"></i>
+      <p>
+        <a href="#" target="_blank">Compartir en twitter</a>
+      </p>
+    </div>
+  </div>
+
+</section>
+  </div>
+</section>
 
 </form>
-<section class="share">
 
-    <div class="share__container js-share">
-        <div class="share__container--icon">
-            <i class="fa-solid fa-share-nodes"></i>
-            <p>COMPARTE</p>
-        </div>
-        <!-- <i id="arrow" class="fa-solid fa-angle-up js-arrow3 arrowDown"></i> -->
-        <i id="arrow" class="fa-solid fa-chevron-up js-arrow3 arrowDown"></i>
-    </div>
-    <div class="js-share-container hidden">
-        <div class="share__container--button ">
-            <button class="share__button"><i class="fa-regular fa-address-card"></i>CREAR TARJETA</button>
-        </div>
-        <section class="twitter">
-    <p class="twitter__paragraph">La tarjeta ha sido creada: </p>
-    <span class="twitter__link">https://awesome-profile-card.com?id=A456DF0001</span>
-        <div class="twitter__click">
-            <i class="fa-brands fa-twitter"></i>
-            <p><a href="#" target="_blank">Compartir en twitter</a></p>
-        </div>
-</section>
-
-    </div>
-
-</section>
-
-
-
-
-
-</main>
-<footer class="containerFooterCards">
+      </div>
+    </main>
+    <footer class="containerFooterCards">
          <span class="containerFooterCards__text">Awesome profile-cards &copy; 2024</span>
         <img class="containerFooterCards__logo" src="./images/logo-adalab.png" alt="adalab_logo" />
 </footer>
 
-    <script src="./js/main.js" type="text/javascript"></script>
-</body>
+    <script
+      src="./js/main.js"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>
