@@ -23,10 +23,8 @@ const thumbnail = document.querySelector(".js-thumbnail");
 const headerDesign = document.querySelector(".js-design");
 const headerFill = document.querySelector(".js-fill");
 const headerShare = document.querySelector(".js-share");
-<<<<<<< HEAD
 const headersCollapsables = document.querySelectorAll(".js-header-collapsable");
-=======
->>>>>>> 203e78bc158e841ec4f52b461738425ba52a33ad
+
 
 //Arrows
 const arrowDesign = document.querySelector(".js-arrow1"); // design
