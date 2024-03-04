@@ -23,6 +23,7 @@ const thumbnail = document.querySelector(".js-thumbnail");
 const headerDesign = document.querySelector(".js-design");
 const headerFill = document.querySelector(".js-fill");
 const headerShare = document.querySelector(".js-share");
+const headersCollapsables = document.querySelectorAll(".js-header-collapsable");
 
 //Arrows
 const arrowDesign = document.querySelector(".js-arrow1"); // design
@@ -44,6 +45,39 @@ const checkThree = document.querySelector(".js-checkThree");
 const formReset = document.querySelector(".js-reset");
 const mainForm = document.querySelector(".js-mainForm");
 
+const createButton = document.querySelector(".js-create-button");
+const cardLink = document.querySelector(".js-link");
+const twitterSection = document.querySelector(".js-twitter");
+const twitterShareButton = document.querySelector(".js-twitter-share-button");
+
+let localStorageData = JSON.parse(localStorage.getItem("localStorageData"));
+
+let data = {
+  palette: "1",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: "",
+};
+
+if (localStorageData !== null) {
+  data = localStorageData;
+} else {
+  data = {
+    palette: "1",
+    name: "",
+    job: "",
+    phone: "",
+    email: "",
+    linkedin: "",
+    github: "",
+    photo: "",
+  };
+}
+
 function handleReset() {
   mainForm.reset();
   namePreview.innerHTML = "Nombre Apellido";
@@ -56,6 +90,7 @@ function handleReset() {
     "url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg')";
   thumbnail.style.backgroundImage = "url('')";
   card.classList.remove("palette2", "palette3");
+  localStorage.removeItem("localStorageData");
 }
 
 formReset.addEventListener("click", handleReset);
@@ -65,118 +100,95 @@ const checkForm = document.querySelector(".js-checkForm");
 function colorPalettes() {
   if (checkOne.checked) {
     card.classList.remove("palette2", "palette3");
+    data.palette = "1";
   } else if (checkTwo.checked) {
     card.classList.add("palette2");
     card.classList.remove("palette3");
+    data.palette = "2";
   } else if (checkThree.checked) {
     card.classList.add("palette3");
     card.classList.remove("palette2");
+    data.palette = "3";
   }
 }
 
 checkForm.addEventListener("click", colorPalettes);
 
-/* function open(content) {
-  content.classList.toggle("hidden");
-}
-
-function close(content1, content2) {
-  content1.classList.add("hidden");
-  content2.classList.add("hidden");
-}
-
-const handleArrow1 = () => {
-  open(containerDesign);
-  close(containerFill, containerShare);
-};
-
-const handleArrow2 = () => {
-  open(containerFill);
-  close(containerDesign, containerShare);
-};
-
-const handleArrow3 = () => {
-  open(containerShare);
-  close(containerDesign, containerFill);
-};
-
-function arrowState() {
-  if (containerDesign.classList.contains("hidden")) {
-    arrowDesign.classList.remove("arrowDown");
-  } else {
-    arrowDesign.classList.add("arrowDown");
-  }
-  if (containerFill.classList.contains("hidden")) {
-    arrowFill.classList.remove("arrowDown");
-  } else {
-    arrowFill.classList.add("arrowDown");
-  }
-  if (containerShare.classList.contains("hidden")) {
-    arrowShare.classList.remove("arrowDown");
-  } else {
-    arrowShare.classList.add("arrowDown");
-  }
-}
-
-headerDesign.addEventListener("click", () => {
-  handleArrow1();
-  arrowState();
-});
-
-headerFill.addEventListener("click", () => {
-  handleArrow2();
-  arrowState();
-});
-
-headerShare.addEventListener("click", () => {
-  handleArrow3();
-  arrowState();
-}); */
-
 const collapsableHeaders = document.querySelectorAll(".js-collapsable-header");
+const collapsableParents = document.querySelectorAll(".js-form-box");
 
 function handleCollapsable(event) {
   const clickHeader = event.currentTarget;
+  const clickedParent = clickHeader.parentNode;
 
-  for (const collapsable of collapsableHeaders) {
-    if (collapsable === clickHeader) {
-      collapsable.classList.toggle("collapsable--close");
+  console.log(clickedParent);
+
+  for (const collapsableParent of collapsableParents) {
+    if (collapsableParent === clickedParent) {
+      collapsableParent.classList.toggle("collapsable--close");
     } else {
-      collapsable.classList.add("collapsable--close");
+      collapsableParent.classList.add("collapsable--close");
     }
   }
 }
-for (let i = 0; i < 3; i++) {
-  collapsableHeaders[i].addEventListener("click", handleCollapsable);
+for (const collapsableHeader of collapsableHeaders) {
+  collapsableHeader.addEventListener("click", handleCollapsable);
 }
-const object1 = {
-  completeName: "",
-  job: "",
-  avatar: "",
-  email: "",
-  telephone: "",
-  linkedin: "",
-  github: "",
-};
 
 function handleInput(event) {
   const eventTarget = event.target.value;
   const idInput = event.target.id;
-  object1[idInput] = event.target.value;
-  if (idInput === "completeName") {
+  data[idInput] = event.target.value;
+  if (idInput === "name") {
     namePreview.innerHTML = eventTarget;
+    data.name = eventTarget;
   } else if (idInput === "job") {
     jobPreview.innerHTML = eventTarget;
+    data.job = eventTarget;
   } else if (idInput === "email") {
     mailPreview.href = "mailto:" + eventTarget;
-  } else if (idInput === "telephone") {
+    data.email = eventTarget;
+  } else if (idInput === "phone") {
     phonePreview.href = "tel:" + eventTarget;
+    data.phone = eventTarget;
   } else if (idInput === "linkedin") {
     linkedinPreview.href = eventTarget;
+    data.linkedin = eventTarget;
   } else if (idInput === "github") {
     githubPreview.href = eventTarget;
+    data.github = eventTarget;
   }
 }
 form.addEventListener("input", handleInput);
+// console.log(data);
+
+const handleCreate = (event) => {
+  event.preventDefault();
+  if (data.photo === null) {
+    data.photo = `${fr.result}`;
+    console.log("data photo es ", data.photo);
+  }
+  console.log(data);
+  localStorageData = localStorage.setItem(
+    "localStorageData",
+    JSON.stringify(data)
+  );
+
+  fetch("https://dev.adalab.es/api/card/", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "content-type": "application/json" },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      cardLink.innerHTML = `${data.cardURL}`;
+      cardLink.href = `${data.cardURL}`;
+      twitterSection.classList.remove("hidden");
+      twitterShareButton.href = `https://twitter.com/intent/tweet?text=${data.cardURL}`;
+    });
+};
+
+createButton.addEventListener("click", handleCreate);
 
 import "./get-avatar.js";

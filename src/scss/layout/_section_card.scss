@@ -1,3 +1,11 @@
+.body-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, $colorGreyLight, $colorWhite);
+}
+
 .section__card {
     background-color: lightblue;
     padding: 40px 35px 40px 45px;
@@ -5,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 27px;
+    
 
 
     &--button {
@@ -17,6 +26,7 @@
         border-radius: 20px;
         max-width: 75px;
         margin-bottom: 20px;
+        cursor: pointer;
         & i {
             margin-right: 5px;
         }
@@ -128,3 +138,24 @@
     } 
 }
 
+@media screen and (min-width: 768px){
+   .main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+   }
+   .section__card {
+    flex-grow: 1;
+    border-radius: 0.4rem;
+    margin: 20px 40px 20px 30px;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    
+   }
+   .container-form {
+    min-width: 400px;
+   }
+   
+}

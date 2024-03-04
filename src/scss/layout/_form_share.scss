@@ -1,62 +1,61 @@
 .share {
+  font-family: $fontTertiary;
+  width: 90%;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 10px auto 30px auto;
+  border-bottom: 1px solid #d8d8d8;
+
+  &__container {
+    display: flex;
+    // padding: 0 0 7px 0;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+
+    &--icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      p {
+        color: $colorGreyDark;
+      }
+      i {
+        color: $colorSecondaryDark;
+      }
+    }
+    &--button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__button {
     font-family: $fontTertiary;
-    width: 90%;
     font-weight: 800;
-    font-size: 18px; 
-    margin: 10px auto 30px auto;
-    border-bottom: 1px solid #d8d8d8;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid $colorSecondaryDark;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 8px lightgray;
+    background-color: $colorSecondaryDark;
+    color: $colorWhite;
+    margin-bottom: 15px;
+    &:hover {
+      color: $colorSecondaryDark;
+      background-color: $colorWhite;
+    }
+    cursor: pointer;
+    i {
+      padding-right: 9px;
+    }
+  }
 
-    
-  
-    
-    &__container {
-        display: flex;
-        // padding: 0 0 7px 0;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        margin: 10px 0 10px 0;
-       
-       
-        &--icon {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            p{
-                color: $colorGreyDark;
-            }
-            i {
-                color: $colorSecondaryDark;
-            }
-        }
-        &--button {
-            display: flex;
-            justify-content: center;
-        }
-    }
-    &__button {
-        font-family: $fontTertiary;
-        font-weight: 800;
-        font-size: 18px;
-        padding: 10px 20px 10px 20px;
-        border: 1px solid $colorSecondaryDark;
-        border-radius: 1rem;
-        box-shadow: 3px 3px 8px lightgray;
-        background-color: $colorSecondaryDark;
-        color: $colorWhite;
-        i {
-            padding-right: 9px;
-        }
-       
-    }
- 
-
-    #arrow {
-        color: #6b6b6b;
-        width: 16px;
-        height: 16px;
-        font-size: 16px;
-        font-weight: 900;
-    }
-  
+  #arrow {
+    color: #6b6b6b;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    font-weight: 900;
+  }
 }

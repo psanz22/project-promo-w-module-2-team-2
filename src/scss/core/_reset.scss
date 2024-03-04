@@ -5,6 +5,10 @@
   list-style: none;
   text-decoration: none;
 }
+a {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
@@ -13,11 +17,11 @@
   transform: rotate(180deg);
 }
 
-.collapsable--close{
-  .collapsable--icon-right{
+.collapsable--close {
+  .collapsable--icon-right {
     transform: rotate(180deg);
   }
-  .collapsable-content{
+  .collapsable-content {
     display: none;
   }
 }
