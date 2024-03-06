@@ -63,8 +63,24 @@ let data = {
   photo: "",
 };
 
+const renderCardPreview = () => {
+  namePreview.innerHTML = data.name;
+  jobPreview.innerHTML = data.job;
+  mailPreview.href = data.email;
+  phonePreview.href = data.phone;
+  linkedinPreview.href = data.linkedin;
+  githubPreview.href = data.github;
+  imagePreview.style.backgroundImage = `url('${data.photo}')`;
+  if (data.palette === "2") {
+    card.classList.add("palette2");
+  } else if (data.palette === "3") {
+    card.classList.add("palette3");
+  }
+};
+
 if (localStorageData !== null) {
   data = localStorageData;
+  renderCardPreview();
 } else {
   data = {
     palette: "1",
@@ -161,8 +177,8 @@ form.addEventListener("input", handleInput);
 
 const handleCreate = (event) => {
   event.preventDefault();
-  //data.photo = `${fr.result}`;
-  if (data.photo === "null") {
+
+  if (fr.result === null) {
     data.photo = localStorageData.photo;
   } else {
     data.photo = `${fr.result}`;
