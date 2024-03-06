@@ -121,8 +121,6 @@ function handleCollapsable(event) {
   const clickHeader = event.currentTarget;
   const clickedParent = clickHeader.parentNode;
 
-  console.log(clickedParent);
-
   for (const collapsableParent of collapsableParents) {
     if (collapsableParent === clickedParent) {
       collapsableParent.classList.toggle("collapsable--close");
@@ -160,19 +158,19 @@ function handleInput(event) {
   }
 }
 form.addEventListener("input", handleInput);
-// console.log(data);
 
 const handleCreate = (event) => {
   event.preventDefault();
-  if (data.photo === null) {
+  //data.photo = `${fr.result}`;
+  if (data.photo === "null") {
+    data.photo = localStorageData.photo;
+  } else {
     data.photo = `${fr.result}`;
-    console.log("data photo es ", data.photo);
   }
-  console.log(data);
-  localStorageData = localStorage.setItem(
-    "localStorageData",
-    JSON.stringify(data)
-  );
+  console.log("dataphoto ", data.photo);
+
+  localStorage.setItem("localStorageData", JSON.stringify(data));
+  console.log("localStorageData ", localStorageData);
 
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
@@ -181,7 +179,6 @@ const handleCreate = (event) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       cardLink.innerHTML = `${data.cardURL}`;
       cardLink.href = `${data.cardURL}`;
       twitterSection.classList.remove("hidden");
