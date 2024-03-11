@@ -1,24 +1,24 @@
-const checkForm = document.querySelector(".js-checkForm");
+const checkForm = document.querySelector('.js-checkForm');
 
 function colorPalettes() {
   if (checkOne.checked) {
-    card.classList.remove("palette2", "palette3");
-    data.palette = "1";
+    card.classList.remove('palette2', 'palette3');
+    data.palette = '1';
   } else if (checkTwo.checked) {
-    card.classList.add("palette2");
-    card.classList.remove("palette3");
-    data.palette = "2";
+    card.classList.add('palette2');
+    card.classList.remove('palette3');
+    data.palette = '2';
   } else if (checkThree.checked) {
-    card.classList.add("palette3");
-    card.classList.remove("palette2");
-    data.palette = "3";
+    card.classList.add('palette3');
+    card.classList.remove('palette2');
+    data.palette = '3';
   }
 }
 
-checkForm.addEventListener("click", colorPalettes);
+checkForm.addEventListener('click', colorPalettes);
 
-const collapsableHeaders = document.querySelectorAll(".js-collapsable-header");
-const collapsableParents = document.querySelectorAll(".js-form-box");
+const collapsableHeaders = document.querySelectorAll('.js-collapsable-header');
+const collapsableParents = document.querySelectorAll('.js-form-box');
 
 function handleCollapsable(event) {
   const clickHeader = event.currentTarget;
@@ -26,38 +26,38 @@ function handleCollapsable(event) {
 
   for (const collapsableParent of collapsableParents) {
     if (collapsableParent === clickedParent) {
-      collapsableParent.classList.toggle("collapsable--close");
+      collapsableParent.classList.toggle('collapsable--close');
     } else {
-      collapsableParent.classList.add("collapsable--close");
+      collapsableParent.classList.add('collapsable--close');
     }
   }
 }
 for (const collapsableHeader of collapsableHeaders) {
-  collapsableHeader.addEventListener("click", handleCollapsable);
+  collapsableHeader.addEventListener('click', handleCollapsable);
 }
 
 function handleInput(event) {
   const eventTarget = event.target.value;
   const idInput = event.target.id;
   data[idInput] = event.target.value;
-  if (idInput === "name") {
+  if (idInput === 'name') {
     namePreview.innerHTML = eventTarget;
     data.name = eventTarget;
-  } else if (idInput === "job") {
+  } else if (idInput === 'job') {
     jobPreview.innerHTML = eventTarget;
     data.job = eventTarget;
-  } else if (idInput === "email") {
-    mailPreview.href = "mailto:" + eventTarget;
+  } else if (idInput === 'email') {
+    mailPreview.href = 'mailto:' + eventTarget;
     data.email = eventTarget;
-  } else if (idInput === "phone") {
-    phonePreview.href = "tel:" + eventTarget;
+  } else if (idInput === 'phone') {
+    phonePreview.href = 'tel:' + eventTarget;
     data.phone = eventTarget;
-  } else if (idInput === "linkedin") {
-    linkedinPreview.href = eventTarget;
+  } else if (idInput === 'linkedin') {
+    linkedinPreview.href = `https://www.linkedin.com/in/${eventTarget}`;
     data.linkedin = eventTarget;
-  } else if (idInput === "github") {
-    githubPreview.href = eventTarget;
+  } else if (idInput === 'github') {
+    githubPreview.href = `https://github.com/${eventTarget}`;
     data.github = eventTarget;
   }
 }
-form.addEventListener("input", handleInput);
+form.addEventListener('input', handleInput);
